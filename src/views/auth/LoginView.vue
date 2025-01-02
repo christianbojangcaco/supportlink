@@ -9,10 +9,12 @@ function onClick() {
 </script>
 
 <template>
-  <v-responsive class="border rounded" max-height="300">
+  <v-responsive class="border rounded">
     <v-app :theme="theme">
       <v-app-bar class="px-3">
-        <v-spacer></v-spacer>
+        <v-spacer>
+          <h1>CLIENT INFORMATION</h1>
+        </v-spacer>
 
         <v-btn
           :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
@@ -24,9 +26,30 @@ function onClick() {
 
       <v-main>
         <v-container>
-          <h1>Main Content</h1>
+          <v-row>
+            <v-col cols="12">
+              <v-card class="mx-auto" prepend-icon="$vuetify" subtitle="The #1 Vue UI Library">
+                <template v-slot:title>
+                  <span class="font-weight-black">Welcome to Vuetify</span>
+                </template>
+
+                <v-card-text class="bg-surface-light pt-4">
+                  <v-sheet class="mx-auto" width="300">
+                    <v-form fast-fail @submit.prevent>
+                      <v-text-field label="Email"></v-text-field>
+
+                      <v-text-field label="Password"></v-text-field>
+
+                      <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+                    </v-form>
+                  </v-sheet>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-container>
       </v-main>
+      <v-footer border app>Copyright</v-footer>
     </v-app>
   </v-responsive>
 </template>
