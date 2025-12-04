@@ -83,7 +83,7 @@
         <v-container>
           <v-row justify="space-between">
             <v-col cols="12" sm="6" class="text-center text-sm-start">
-              <span>© 2024 - SupportLink | All Rights Reserved</span>
+              <span>© 2025 - SupportLink | All Rights Reserved</span>
             </v-col>
             <v-col cols="12" sm="6" class="text-center text-sm-end">
               <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
